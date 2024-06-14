@@ -3,7 +3,10 @@ function returnsThree() {
 }
 
 function reciprocal(n) {
-  // Your code here 
+  if (n > 1000000 || n < 0) {
+    throw new RangeError('number has to be between 0 and 1,000,000')
+  }
+  return 1 / n
 }
 
 module.exports = {
